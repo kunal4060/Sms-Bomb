@@ -1,101 +1,61 @@
-<h1 align="center">Sms-Bombv5.0<br>
-</h1>
-<img src="smsbombv5.png" alt="Paris" class="center">
-* `📱 💀`<br />
-* `A Sms-Bomber for termux & Linux `
+# Sms-Bomb
 
-## Disclaimer
-*This tool is for educational purposes only !*
-_Don't use this to take revenge_<br />
-*I will not be responsible for any misuse*
+A Python tool that sends repeated SMS messages to an Indian mobile number, originally built as a prank tool for Termux and Linux.
 
-## About
-* `Unlimited Bombing only Indian Number`
-* `Cross Platform`
-* `Supports newest Android also`
-* `No balance will be deducted`
-* `Working Apis`
-* `No missing Api issues,`
-* `Working with all Operators/Carriers`
+> **Use responsibly:** Only use this on your own number or with the explicit consent of the recipient. Sending unsolicited messages can violate your carrier's terms and local law. The author is not responsible for misuse.
 
-## Tested On :
-<ul>
-  <li>Termux</li>
-  <li>Parrot os</li>
-</ul>
+## What it does
 
-## Termux Issue:
-* `Termux App is no longer recieving updates on playstore`
-* `due to recently introduced Google Play policy `
-<br>
+`main.py` takes a target phone number and fires repeated SMS requests through bundled API endpoints. `update.py` handles self-updates of the tool.
 
-DON'T WORRY
-* `We have a solution for that !`
-<br>
+## Requirements
 
+- Python 3.8 or newer
+- The packages in `requirements.txt` (`requests`, `aiohttp`, `pycryptodome`, `tqdm`, and others)
+- A terminal — or [Termux](https://f-droid.org/repo/com.termux_118.apk) on Android
 
-You can download the latest termux app and install it
+## Install
 
-From here <a href="https://f-droid.org/repo/com.termux_118.apk">Link</a>
+### 1. Download the project
 
-## Usage
-
-
-
-#### For Termux
-
-Update the packages
 ```bash
-pkg up -y
-```
-Install some dependencies
-```bash
-pkg install git wget python -y
-```
-Clone the repository
-```bash
-git clone https://github.com/samay825/Sms-Bomb
-```
-Go to the Sms-Bomb directory
-```bash
+git clone https://github.com/kunal4060/Sms-Bomb.git
 cd Sms-Bomb
 ```
-Now Install the Requirements 
+
+### 2. Install the Python packages
+
 ```bash
 pip install -r requirements.txt
 ```
-Run the script
+
+## Usage
+
 ```bash
 python3 main.py
 ```
 
+Follow the on-screen prompts to enter the target number. On Termux, install dependencies first:
 
-## Version
-* `v5.0 Sms-Bomb`
+```bash
+pkg install git python -y
+pip install -r requirements.txt
+```
 
-## Features
-* `B#omb the number unlimited,Custom-sms`
+## Troubleshooting
 
-* `Free version speed is in goodflow`
+### Termux from the Play Store is outdated
 
-## Partners
-* `https://github.com/anubhavanonymous/XLR8_BOMBER`
-* `https://github.com/sw4pn33`
+The Play Store build of Termux no longer receives updates. Install the latest APK from F-Droid instead: <https://f-droid.org/repo/com.termux_118.apk>
 
-## Note
-* `This Sms-Bomb is mainly to prank Friends`
+### `ModuleNotFoundError`
 
-## Licence
-Apache 2.0 © Samay825
+Install the requirements with the same Python you run the script with:
 
+```bash
+python3 -m pip install -r requirements.txt
+```
 
-## Contact Us
-* `If you have any feedback or queries`
-* `Instagram: @sincryptzork`
-* `Telegram: @sincryptzork`
+## License
 
-## Telegram Channel
-
-* `All updates of Team Sincryption will be posted here !`
-* `Link : https://t.me/TeamSincryption`
-
+Provided for educational purposes only. No warranty is provided.
